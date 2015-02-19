@@ -3,5 +3,6 @@ define(["utils"], function(utils) {
 		"NOTE_CREATE",
 		"NOTE_UPDATE",
 		"NOTE_LOCK",
-		"NOTE_SELECT"]);	
+		"NOTE_SELECT",
+		"NOTE_EDIT"]);	
 });

@@ -9,6 +9,13 @@ define(["dispatcher", "constants"], function(dispatcher, constants) {
 			});
 		},
 		
+		edit: function(id) {
+			dispatcher.dispatch({
+				actionType: constants.NOTE_EDIT,
+				id: id
+			});
+		},
+		
 		update: function(id, title, text) {
 			dispatcher.dispatch({
 				actionType: constants.NOTE_UPDATE,
