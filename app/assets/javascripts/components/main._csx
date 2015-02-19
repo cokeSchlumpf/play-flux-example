@@ -1,0 +1,7 @@
+define ["react"], (React) ->
+
+	HelloWorld = React.createClass
+		render: ->
+			<div>Hello World!</div>
+			
+	React.render(<HelloWorld />, document.getElementById("react"))
