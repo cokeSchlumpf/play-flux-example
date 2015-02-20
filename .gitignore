@@ -17,3 +17,4 @@ dist
 bin/
 /.DS_Store
 client/.classpath
+project/.DS_Store
