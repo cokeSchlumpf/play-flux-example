@@ -31,9 +31,5 @@
   };
 
   // Load the app. This is kept minimal so it doesn't need much updating.
-  require(['components'],
-    function () {
-      console.log("HUHUUU!");
-    }
-  );
+  require( ['./websocket', 'components'], function () { } );
 })(requirejs);
