@@ -14,7 +14,6 @@ class DispatcherActor(out: ActorRef) extends Actor {
 
   def receive = {
     case msg: String =>
-      println(msg)
       out ! "Received your message."
     case SayHello(message, _) =>
       println(message)

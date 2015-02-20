@@ -11,7 +11,7 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.8")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.0.0")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-jshint" % "1.0.1")
+// addSbtPlugin("com.typesafe.sbt" % "sbt-jshint" % "1.0.1")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-rjs" % "1.0.1")
 
@@ -22,3 +22,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 addSbtPlugin("default" % "sbt-coffeescript-reactjs" % "1.0.1-SNAPSHOT")
 
 addSbtPlugin("com.github.ddispaltro" % "sbt-reactjs" % "0.4.0")
+
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.0")
+
+addSbtPlugin("com.vmunier" % "sbt-play-scalajs" % "0.2.1")
