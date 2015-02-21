@@ -13,7 +13,10 @@
         // it's not a RequireJS module, so we have to tell it what var is returned
         exports: 'jsRoutes'
       },
-      'bootstrap': ['jquery']
+      'bootstrap': ['jquery'],
+      'shared': {
+    	  exports: 'client'
+      } 
     },
     paths: {
       'bootstrap': ['../lib/bootstrap/js/bootstrap'],
@@ -22,7 +25,8 @@
       'jquery': ['../lib/jquery/jquery'],
       'jsRoutes': ['/jsroutes'],
       'requirejs': ['../lib/requirejs/require'],
-      'react': ['../lib/react/react']
+      'react': ['../lib/react/react'],
+      'shared': ['../client-fastopt']
     }
   });
 

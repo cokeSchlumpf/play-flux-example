@@ -8,21 +8,28 @@ import scala.annotation.meta.field
 
 import prickle._
 
-@JSExport
-case class TestClass(
-    @(JSExport @field) name: String, 
-    @(JSExport @field) actionType: String) {
-  
-    @JSExport
-    def foo() = Pickle.intoString(this)
-  
-    def toJSON() = Pickle.intoString(this)
+sealed trait ClientEvent {
+   val actionType: String 
+   
+   def toJSON: String
 }
 
+@JSExport
+case class SayHello(
+    @(JSExport @field) message: String, 
+    @(JSExport @field) actionType: String = "sayHello") extends ClientEvent {
+  
+  @JSExport
+  def toJSON() = Pickle.intoString(this)
+  
+}
 
-//@JSExportAll
-//class Test() {
-//  
-//  def test = new TestClass("Michael", "test")
-//  
-//}
+@JSExport
+case class SayGoodbye(
+    @(JSExport @field) message: String, 
+    @(JSExport @field) actionType: String = "sayGoodbye") extends ClientEvent {
+  
+  @JSExport
+  def toJSON() = Pickle.intoString(this)
+  
+}

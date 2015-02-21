@@ -1,8 +1,7 @@
 package actors
 
 import akka.actor._
-import events.SayHello
-import events.SayGoodbye
+import client._
 
 object DispatcherActor {
   
@@ -16,12 +15,9 @@ class DispatcherActor(out: ActorRef) extends Actor {
     case msg: String =>
       out ! "Received your message."
     case SayHello(message, _) =>
-      println(message)
       out ! SayGoodbye("Tschüss!")
     case other =>
       println(other)
   }
-  
-  out ! SayHello("HORST!")
   
 }

@@ -4,11 +4,12 @@ import play.api._
 import play.api.mvc._
 import play.api.cache.Cached
 import actors.DispatcherActor
-import events.ClientEvent
+import client._
 
 object Application extends Controller {
 
   implicit val app: play.api.Application = play.api.Play.current
+  import events.Formats._
 
   /**
    * Retrieves all routes via reflection.
